@@ -23,6 +23,7 @@ if __name__ == '__main__':
     infoJson = json.loads(info.content)
     # print email.content
     print info.content
+    # json schema for json resume
     data = {
     "basics": {
     "name": "",
@@ -57,4 +58,18 @@ if __name__ == '__main__':
     data["basics"]["countryCode"] = infoJson["location"]["country"]["code"]
     if "summary" in infoJson:
         data["basics"]["summary"] = infoJson["summary"]
-    data["basics"]["label"] = infoJson["headline"]
+        data["basics"]["label"] = infoJson["headline"]
+    if infoJson["positions"]["_total"]>0:
+        data["work"] = [
+        {
+        "company": infoJson["positions"]["values"][0]["company"]["name"],
+        "position": infoJson["positions"]["values"][0]["title"],
+        "website": "",
+        "startDate": str(infoJson["positions"]["values"][0]["startDate"]["month"]) + "/" + str(infoJson["positions"]["values"][0]["startDate"]["year"]),
+        "endDate": "present",
+        "summary": infoJson["positions"]["values"][0]["summary"],
+        "highlights": []
+        }]
+        if(not infoJson["positions"]["values"][0]["isCurrent"]):
+            data["work"]["endDate"] = str(infoJson["positions"]["values"][0]["endDate"]["month"]) + "/" + str(infoJson["positions"]["values"][0]["endDate"]["year"])
+    print str(data)
