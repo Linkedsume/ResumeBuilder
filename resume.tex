@@ -1,0 +1,34 @@
+\documentclass{article}
+
+\usepackage{luacode}
+
+\begin{document}
+
+\begin{luacode}
+function read(file)
+    local handler = io.open(file, "rb")
+    local content = handler:read("*all")
+    handler:close()
+    return content
+end
+JSON = (loadfile "JSON.lua")()
+local table = JSON:decode(read("resume.json"))
+tex.print(table['firstName'] .. " " .. table['lastName'] .. "\\par")
+tex.print(table['headline'] .. "\\par")
+tex.print(table['location']['name'] .. "\\par")
+tex.print("Email: " .. table['emailAddress'] .. "\\par")
+tex.print("\\hfill\\par")
+if table['positions']['_total']>0 then
+  tex.print("Positions:\\par")
+end
+for i=1,table['positions']['_total'],1 do
+  tex.print(table['positions']['values'][i]['company']['name'] .. "\\par")
+  tex.print(table['positions']['values'][i]['title'] .. "\\par")
+  tex.print(table['positions']['values'][i]['summary'] .. "\\par")
+  tex.print(table['positions']['values'][i]['startDate']['month'] .. "/" .. table['positions']['values'][i]['startDate']['year'] .. "-Present\\par")
+  tex.print("\\hfill\\par")
+end
+
+\end{luacode}
+
+\end{document}
