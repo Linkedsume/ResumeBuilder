@@ -1,0 +1,219 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-weight: 300;
+}
+
+.toplist {
+  width:100%;
+  height:640px;
+  opacity:20%;
+  color:white;
+  background-color: #0072BB;
+}
+
+.logo {
+  font-family: 'Titillium Web', sans-serif;
+  line-height: 70px;
+  font-size: 40px;
+  padding-right: 250px;
+}
+
+.toplist .homelist {
+  text-align: center;
+  height:80px;
+  height:735px;
+}
+
+.list{
+  padding-right: 35px;
+}
+
+.list a{
+  text-decoration: none;
+  color:white;
+}
+
+.list a:hover{
+	color:#FF9900;
+	transition: color 0.2s linear;
+}
+
+.mainlist {
+  width:100%;
+  height: 70px;
+  margin: 0;
+  padding:0;
+  text-align: center;
+  position: fixed;
+	border-bottom-style: solid;
+	border-bottom-color: white;
+}
+
+.toplist .homelist ul li {
+  font-family: 'Titillium Web', sans-serif;
+	display: inline-block;
+	font-weight: bold;
+	padding-top: 15	px;
+}
+
+.maintext{
+  font-family: 'Titillium Web', sans-serif;
+  color:white;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 180px;
+}
+
+.title{
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 100px;
+	color:#FF9900;
+	font-weight: bold;
+}
+
+.buttons{
+  padding-top: 40px;
+  text-align: center;
+}
+
+.sign_in{
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+  line-height: 30px;
+  font-size: 20px;
+  background-color: white;
+  color:#0072BB;
+  border:0;
+  border-radius: 5px;
+  padding-top: 17px;
+  padding-bottom: 19px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.sign_in:hover{
+  background-color: #FF9900;
+	color:white;
+	transition: background-color 0.1s linear;
+	cursor: pointer;
+}
+
+.sign_in:active {
+	box-shadow: inset 0 0 0 1px rgba(255,255,255, 0.3),inset 0 5px 30px rgba(255,255,255, 0.3);
+}
+
+.sign_in:focus {
+  outline: none
+}
+
+.signup{
+	background-color: whitesmoke;
+	height:600px;
+}
+
+.info{
+
+}
+
+.signupinfo{
+	float: left;
+	padding-left: 30%;
+	padding-top: 110px;
+}
+
+.intro{
+	font-size: 40px;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 100;
+	line-height: 45px;
+}
+
+.intropara{
+	font-size: 22px;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 100;
+	line-height: 30px;
+}
+
+.signupbox{
+	float:right;
+	padding-right: 30%;
+	padding-top: 144px;
+}
+
+.inputname{
+	padding-bottom: 20px;
+	display: block;
+}
+
+.username{
+	font-size: 18px;
+	height:35px;
+	width:330px;
+	padding: 3px 20px;
+	border-radius: 4px;
+	border: 1px solid grey;
+}
+
+.sign_up{
+	font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+  line-height: 30px;
+  font-size: 18px;
+	width:373px;
+	padding-top:5px;
+	padding-bottom: 6px;
+	background-color: #0072BB;
+	border:0;
+  border-radius: 5px;
+	color:white;
+}
+
+.sign_up:hover{
+	background-color: #FF9900;
+	color:white;
+	cursor: pointer;
+}
+
+.login{
+	display:block;
+	padding-top: 20px;
+}
+
+.account{
+	padding-top: 4px;
+	float: left;
+	padding-right: 7px;
+}
+
+.log_in{
+	float:right;
+	font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+  line-height: 30px;
+  font-size: 18px;
+	width:172px;
+	padding-top:5px;
+	padding-bottom: 6px;
+	background-color: #0072BB;
+	border:0;
+  border-radius: 5px;
+	color:white;
+}
+
+.log_in:hover{
+	background-color: #FF9900;
+	color:white;
+	cursor: pointer;
+}
+
+footer{
+	text-align: center;
+}
+
+.copyright{
+	padding-top: 50px;
+	height:100px;
+	color:grey;
+}
