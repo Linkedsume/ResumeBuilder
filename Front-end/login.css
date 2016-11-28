@@ -1,0 +1,89 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-weight: 300;
+}
+
+.whole {
+  background-color: #0072BB;
+  height:100%;
+  text-align: center;
+}
+
+.logo{
+  padding-top: 250px;
+  font-size: 100px;
+  color:white;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.loginbox{
+}
+
+.inputname{
+  display:block;
+  padding-right: 43px;
+}
+
+.username{
+  font-size: 18px;
+	height:70px;
+	width:400px;
+	padding: 3px 20px;
+	border-radius: 1px;
+	border: 1px solid white;
+  background-color: #0072BB;
+  color:white;
+}
+
+.username:hover{
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.username:focus{
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.login{
+  padding-right: 43px;
+  padding-top: 40px;
+}
+
+.log_in{
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+  line-height: 50px;
+  font-size: 20px;
+	width:350px;
+	padding-top:5px;
+	padding-bottom: 6px;
+	background-color: white;
+	border:0;
+  border-radius: 2px;
+	color:#0072BB;
+}
+
+.log_in:hover{
+  background-color: #FF9900;
+  color:white;
+  cursor: pointer;
+}
+
+.register{
+  display:block;
+  padding-right: 30px;
+  padding-top: 30px;
+  color:white;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
+}
+
+.register a{
+  text-decoration: underline;
+  color:white;
+}
+
+.register a:hover{
+  color:#FF9900;
+  cursor: pointer;
+}
