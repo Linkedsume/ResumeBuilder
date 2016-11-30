@@ -14,19 +14,17 @@ body {
 
 .logo {
   font-family: 'Titillium Web', sans-serif;
-  line-height: 70px;
-  font-size: 40px;
-  padding-right: 250px;
+  line-height: 200%;
+  font-size: 220%;
+  padding-right: 13%;
 }
 
 .toplist .homelist {
   text-align: center;
-  height:80px;
-  height:735px;
 }
 
 .list{
-  padding-right: 35px;
+  padding-right: 1.5%;
 }
 
 .list a{
@@ -42,7 +40,7 @@ body {
 .mainlist {
 	background-color: #0072BB;
   width:100%;
-  height: 70px;
+  height: 6%;
   margin: 0;
   padding:0;
   text-align: center;
@@ -55,42 +53,42 @@ body {
   font-family: 'Titillium Web', sans-serif;
 	display: inline-block;
 	font-weight: bold;
-	padding-top: 15	px;
+	padding-top: 0.03%;
 }
 
 .maintext{
   font-family: 'Titillium Web', sans-serif;
   color:white;
   text-align: center;
-  font-size: 30px;
-  padding-top: 180px;
+  font-size: 200%;
+  padding-top: 8.2%;
 }
 
 .title{
 	font-family: 'Titillium Web', sans-serif;
-	font-size: 100px;
+	font-size: 625%;
 	color:white;
 	font-weight: bold;
 }
 
 .buttons{
-  padding-top: 40px;
+  padding-top: 1.5%;
   text-align: center;
 }
 
 .sign_in{
   font-family: 'Titillium Web', sans-serif;
   font-weight: bold;
-  line-height: 30px;
-  font-size: 20px;
+  line-height: 150%;
+  font-size: 140%;
   background-color: white;
   color:#0072BB;
   border:0;
   border-radius: 5px;
-  padding-top: 17px;
-  padding-bottom: 19px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-top: 0.8%;
+  padding-bottom: 0.85%;
+  padding-left: 1.14%;
+  padding-right: 1.14%;
 }
 
 .sign_in:hover{
@@ -115,51 +113,51 @@ body {
 
 .linkedin{
 	float:left;
-	padding-left: 5px;
-	padding-top: 5px;
+	padding-left: 1.4%;
+	padding-top: 1.4%;
 }
 
 .word{
 	float:right;
-	padding-right: 20px;
+	padding-right: 5.6%;
 }
 
 .signupinfo{
 	float: left;
-	padding-left: 21%;
-	padding-top: 110px;
+	padding-left: 29%;
+	padding-top: 5%;
 }
 
 .intro{
-	font-size: 40px;
+	font-size: 260%;
 	font-family: 'Titillium Web', sans-serif;
 	font-weight: 100;
-	line-height: 45px;
+	line-height: 110%;
 }
 
 .intropara{
-	font-size: 22px;
+	font-size: 140%;
 	font-family: 'Titillium Web', sans-serif;
 	font-weight: 100;
-	line-height: 30px;
+	line-height: 135%;
 }
 
 .signupbox{
 	float:right;
-	padding-right: 21%;
-	padding-top: 144px;
+	padding-right: 31%;
+	padding-top: 6.58%;
 }
 
 .inputname{
-	padding-bottom: 20px;
+	padding-bottom: 5.35%;
 	display: block;
 }
 
 .username{
-	font-size: 18px;
+	font-size: 113%;
 	height:35px;
-	width:330px;
-	padding: 3px 20px;
+	width:110%;
+	padding: 1.3% 6.5%;
 	border-radius: 4px;
 	border: 1px solid grey;
 }
@@ -167,11 +165,11 @@ body {
 .sign_up{
 	font-family: 'Titillium Web', sans-serif;
   font-weight: bold;
-  line-height: 30px;
-  font-size: 18px;
-	width:373px;
-	padding-top:5px;
-	padding-bottom: 6px;
+  line-height: 170%;
+  font-size: 113%;
+	width:124%;
+	padding-top:2%;
+	padding-bottom: 2%;
 	background-color: #0072BB;
 	border:0;
   border-radius: 5px;
@@ -186,24 +184,29 @@ body {
 
 .login{
 	display:block;
-	padding-top: 20px;
+	padding-top: 5%;
+	width:124%;
 }
 
 .account{
-	padding-top: 4px;
+	font-family: 'Titillium Web', sans-serif;
+	padding-top: 1.5%;
 	float: left;
-	padding-right: 7px;
+}
+
+.log{
+	padding-left: 15%;
 }
 
 .log_in{
 	float:right;
 	font-family: 'Titillium Web', sans-serif;
   font-weight: bold;
-  line-height: 30px;
-  font-size: 18px;
-	width:172px;
-	padding-top:5px;
-	padding-bottom: 6px;
+  line-height: 170%;
+  font-size: 113%;
+	width:59%;
+	padding-top:2%;
+	padding-bottom: 2%;
 	background-color: #0072BB;
 	border:0;
   border-radius: 5px;
@@ -217,11 +220,13 @@ body {
 }
 
 footer{
+	font-family: 'Titillium Web', sans-serif;
 	text-align: center;
 }
 
 .copyright{
-	padding-top: 50px;
-	height:100px;
+	padding-top: 2.8%;
+	padding-bottom: 2.8%;
+	height:100%;
 	color:grey;
 }
