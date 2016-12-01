@@ -18,15 +18,13 @@ body {
 	font-weight: bold;
 }
 
-.loginbox{
-}
-
 .inputname{
   display:block;
   padding-right: 43px;
 }
 
 .username{
+	font-family: 'Titillium Web', sans-serif;
   font-size: 21px;
 	height:70px;
 	width:400px;
