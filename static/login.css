@@ -5,7 +5,7 @@ body {
 }
 
 .whole {
-  background-color: #0072BB;
+  background-image:linear-gradient(to bottom right,#3e5b95, #30bfbf);
   height:100%;
   text-align: center;
 }
@@ -31,7 +31,7 @@ body {
 	padding: 3px 20px;
 	border-radius: 1px;
 	border: 1px solid white;
-  background-color: #0072BB;
+  background-color: inherit;
   color:white;
 }
 
@@ -59,11 +59,11 @@ body {
 	background-color: white;
 	border:0;
   border-radius: 2px;
-	color:#0072BB;
+	color:#3695ae;
 }
 
 .log_in:hover{
-  background-color: #FF9900;
+  background-color: #FFCC00;
   color:white;
   cursor: pointer;
 }
@@ -83,6 +83,6 @@ body {
 }
 
 .register a:hover{
-  color:#FF9900;
+  color:#FFCC00;
   cursor: pointer;
 }

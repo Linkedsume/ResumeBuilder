@@ -4,7 +4,7 @@ body {
 }
 
 .whole {
-  background-color: #0072BB;
+	background-image:linear-gradient(to bottom right,#3e5b95, #30bfbf);
   height:650px;
   width:100%;
   color:white;
@@ -26,7 +26,7 @@ body {
 
 .logo {
   font-family: 'Titillium Web', sans-serif;
-  font-size: 180%;
+  font-size: 200%;
   padding-right:14%;
   font-weight: bold;
 }
@@ -43,7 +43,7 @@ body {
 }
 
 .list a:hover{
-	color:#FF9900;
+	color:#FFCC00;
 	transition: color 0.2s linear;
 }
 
@@ -67,11 +67,12 @@ body {
   font-family: 'Titillium Web', sans-serif;
   font-weight: bold;
   line-height: 150%;
-  font-size: 140%;
+  font-size: 120%;
   background-color: white;
-  color:#0072BB;
+	color:#3695ae;
   border:0;
-  border-radius: 5px;
+  border-radius: 0px;
+	transition: 0.2s linear;
   padding-top: 15px;
   padding-bottom: 16px;
   padding-left: 1.14%;
@@ -79,10 +80,11 @@ body {
 }
 
 .sign_in:hover{
-  background-color: #FF9900;
-	color:white;
-	transition: background-color 0.1s linear;
+	transition:  0.2s linear;
 	cursor: pointer;
+	-webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
 }
 
 .sign_in:active {
@@ -164,7 +166,7 @@ body {
   font-weight: bold;
   font-size: 18px;
 	width:430px;
-	background-color: #0072BB;
+	background-color: #30bfbf;
 	border:0;
   border-radius: 5px;
 	color:white;
@@ -172,7 +174,7 @@ body {
 }
 
 .sign_up:hover{
-	background-color: #FF9900;
+	background-color: #97dfdf;
 	color:white;
 	cursor: pointer;
 }
@@ -189,7 +191,7 @@ body {
   font-weight: bold;
   font-size: 18px;
 	width:254px;
-	background-color: #0072BB;
+	background-color: #30bfbf;
 	border:0;
   border-radius: 5px;
 	color:white;
@@ -197,7 +199,7 @@ body {
 }
 
 .log_in:hover{
-	background-color: #FF9900;
+	background-color: #97dfdf;
 	color:white;
 	cursor: pointer;
 }
