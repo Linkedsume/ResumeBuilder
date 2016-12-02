@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
   <title>Linkedsume log in</title>
-  <link rel="stylesheet" href="login.css">
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 </head>
 <body>
@@ -11,6 +11,7 @@
       Linkedsume
     </div>
     <div class="loginbox">
+      <form action="{{ url_for('login') }}" method="post" class="login">
       <ul class="inputs">
         <li class="inputname"><input class="username" type="text" name="username" placeholder="Username/Email"></li>
         <li class="inputname"><input class="username" type="password" name="password" placeholder="Password"></li>
@@ -18,6 +19,7 @@
         <li class="register">Not a member yet? <a href="Linkedsume.html">Register</a>
           now with your linkedin account</li>
       </ul>
+    </form>
   </div>
 </body>
 </html>

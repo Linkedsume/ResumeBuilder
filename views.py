@@ -35,6 +35,19 @@ def query_db(query, args=(), one=False):
     return (rv[0] if rv else None) if one else rv
 
 @app.route('/', methods = ['GET', 'POST'])
+def register():
+    error = None
+    if request.method == 'POST':
+        db = get_db()
+        user = query_db('select * from users where username = ?', [request.form['username']], one = True)
+        if user != None:
+            return 'username already in use'
+        command = 'insert into users (user_id, username, password) values (?,?,?)'
+        command_args = [None, request.form['username'], request.form['password']]
+        db.execute(command,command_args)
+        db.commit()
+        return redirect(url_for('login'))
+    return render_template('Linkedsume.html', error = error)
 
 @app.route('/login', methods = ['GET','POST'])
 def login():
@@ -47,5 +60,6 @@ def login():
             return 'invalid password'
         else:
             session['logged_in'] = True
-            return redirect(url_for('start'))
+            return redirect(url_for('register'))
+            # redirect url for register is only placeholder until we get the third page
     return render_template('login.html', error = error)
