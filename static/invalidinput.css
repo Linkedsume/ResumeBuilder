@@ -44,8 +44,18 @@ body {
 }
 
 .login{
-  padding-top: 30px;
+  padding-top: 11px;
 	padding-right: 19px;
+}
+
+.invalid{
+	font-family: 'Titillium Web', sans-serif;
+	color:red;
+	padding-right: 20px;
+}
+
+.loginbox{
+	padding-top: 19px;
 }
 
 .log_in{
