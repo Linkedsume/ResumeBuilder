@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
   <title>Linkedsume:The Perfect Resume Generator</title>
-  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='linkedsume.css') }}">
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='repeatedusername.css') }}">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 </head>
 <body>
@@ -38,6 +38,7 @@
       <div class="signupbox">
         <form action="{{ url_for('register') }}" method="post" class="reguster">
         <ul class="inputs">
+          <div class="repeatusername">Username already in use</div>
           <li class="inputname"><input class="username" type="text" name="username" placeholder="Username"></li>
           <li class="inputname"><input class="username" type="text" name="email" placeholder="Email"></li>
           <li class="inputname"><input class="username" type="password" name="password" placeholder="Password"></li>

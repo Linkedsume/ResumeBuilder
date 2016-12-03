@@ -41,7 +41,7 @@ def register():
         db = get_db()
         user = query_db('select * from users where username = ?', [request.form['username']], one = True)
         if user != None:
-            return 'username already in use'
+            return render_template('repeatedusername.html', error = error)
         command = 'insert into users (user_id, username, password) values (?,?,?)'
         command_args = [None, request.form['username'], request.form['password']]
         db.execute(command,command_args)

@@ -155,6 +155,15 @@ body {
 	font-family: 'Titillium Web', sans-serif;
 }
 
+.repeatusername{
+  font-family: 'Titillium Web', sans-serif;
+  float:right;
+  color:red;
+  text-decoration: none;
+  padding-top: 14px;
+  padding-right: 380px;
+}
+
 .linkedin{
 	float:left;
 	padding-left: 1.4%;
