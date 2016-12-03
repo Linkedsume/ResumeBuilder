@@ -55,9 +55,9 @@ def login():
     if request.method == 'POST':
         user = query_db('select * from users where username = ?', [request.form['username']], one = True)
         if user == None:
-            return 'invalid username'
+            return render_template('invalidinput.html', error = error)
         elif user[2] != request.form['password']:
-            return 'invalid password'
+            return render_template('invalidinput.html', error = error)
         else:
             session['logged_in'] = True
             return redirect(url_for('register'))
