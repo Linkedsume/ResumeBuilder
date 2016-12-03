@@ -25,8 +25,19 @@ if __name__ == '__main__':
     file.close()
 
 
+
 def author():
-        linkedin = OAuth2Session(CLIENT_ID, redirect_uri=RETURN_URL)
-        linkedin = linkedin_compliance_fix(linkedin)
-        authorization_url, state = linkedin.authorization_url(AUTHORIZATION_BASE_URL)
-        return authorization_url
+    linkedin = OAuth2Session(CLIENT_ID, redirect_uri=RETURN_URL)
+    linkedin = linkedin_compliance_fix(linkedin)
+    authorization_url, state = linkedin.authorization_url(AUTHORIZATION_BASE_URL)
+    return authorization_url
+
+def make_json(redirect_response):
+    linkedin = OAuth2Session(CLIENT_ID, redirect_uri=RETURN_URL)
+    linkedin = linkedin_compliance_fix(linkedin)
+    linkedin.fetch_token(TOKEN_URL, client_secret=CLIENT_SECRET, authorization_response=redirect_response)
+    info = linkedin.get("https://api.linkedin.com/v1/people/~:(id,email-address,first-name,last-name,industry,positions,summary,headline,location)/?format=json")
+    infoJson = json.loads(info.content)
+    file = open('resume.json','w+')
+    file.write(info.content)
+    file.close()

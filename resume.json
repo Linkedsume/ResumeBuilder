@@ -1,0 +1,27 @@
+{
+  "emailAddress": "jonathanstein98@gmail.com",
+  "firstName": "Jonathan",
+  "headline": "Student at University of Illinois at Urbana-Champaign",
+  "id": "UtlcZgsnOb",
+  "industry": "Computer Software",
+  "lastName": "Stein",
+  "location": {
+    "country": {"code": "us"},
+    "name": "Urbana-Champaign, Illinois Area"
+  },
+  "positions": {
+    "_total": 1,
+    "values": [{
+      "company": {"name": "companyname"},
+      "id": 878882094,
+      "isCurrent": true,
+      "location": {"name": "location"},
+      "startDate": {
+        "month": 7,
+        "year": 2016
+      },
+      "summary": "desciption",
+      "title": "titile"
+    }]
+  }
+}

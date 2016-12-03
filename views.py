@@ -44,12 +44,14 @@ def query_db(query, args=(), one=False):
 def wtf():
     if 'code' in request.args:
         generate = "https://localhost:5000/?code=" + request.args['code']
+        link.make_json(generate)
+        os.system("lualatex resume.tex")
+        return "done"
 
 @app.route('/authorize')
 def authorize():
     redirection = link.author()
     return redirect(redirection)
-
 
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
@@ -58,7 +60,7 @@ def register():
         db = get_db()
         user = query_db('select * from users where username = ?', [request.form['username']], one = True)
         if user != None:
-            return 'username already in use'
+            return render_template('repeatedusername.html', error = error)
         command = 'insert into users (user_id, username, password) values (?,?,?)'
         command_args = [None, request.form['username'], request.form['password']]
         db.execute(command,command_args)
