@@ -1,6 +1,12 @@
 from flask import Flask, session, redirect, url_for, escape, request, render_template, g
 import os
 import sqlite3
+import link
+from OpenSSL import SSL
+
+context = SSL.Context(SSL.SSLv23_METHOD)
+context.use_privatekey_file('domain.key')
+context.use_certificate_file('domain.crt')
 
 app = Flask(__name__)
 DATABASE = 'linkedsume.db'
@@ -34,7 +40,18 @@ def query_db(query, args=(), one=False):
     cur.close()
     return (rv[0] if rv else None) if one else rv
 
-@app.route('/', methods = ['GET', 'POST'])
+@app.route('/', methods = ['GET'])
+def wtf():
+    if 'code' in request.args:
+        generate = "https://localhost:5000/?code=" + request.args['code']
+
+@app.route('/authorize')
+def authorize():
+    redirection = link.author()
+    return redirect(redirection)
+
+
+@app.route('/register', methods = ['GET', 'POST'])
 def register():
     error = None
     if request.method == 'POST':
@@ -63,3 +80,8 @@ def login():
             return redirect(url_for('register'))
             # redirect url for register is only placeholder until we get the third page
     return render_template('login.html', error = error)
+
+
+if __name__ == "__main__":
+    context = ('domain.crt', 'domain.key')
+    app.run(host='127.0.0.1', port=5000, ssl_context=context, threaded=True, debug=True)

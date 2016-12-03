@@ -10,6 +10,7 @@ AUTHORIZATION_BASE_URL = 'https://www.linkedin.com/uas/oauth2/authorization'
 TOKEN_URL = 'https://www.linkedin.com/uas/oauth2/accessToken'
 RETURN_URL = 'https://localhost:5000/'
 
+
 if __name__ == '__main__':
     linkedin = OAuth2Session(CLIENT_ID, redirect_uri=RETURN_URL)
     linkedin = linkedin_compliance_fix(linkedin)
@@ -22,3 +23,10 @@ if __name__ == '__main__':
     file = open('resume.json','w+')
     file.write(info.content)
     file.close()
+
+
+def author():
+        linkedin = OAuth2Session(CLIENT_ID, redirect_uri=RETURN_URL)
+        linkedin = linkedin_compliance_fix(linkedin)
+        authorization_url, state = linkedin.authorization_url(AUTHORIZATION_BASE_URL)
+        return authorization_url
