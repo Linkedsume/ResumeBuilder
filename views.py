@@ -58,6 +58,7 @@ def login():
             return render_template('invalidinput.html', error = error)
         elif user[2] != request.form['password']:
             return render_template('invalidinput.html', error = error)
+            #showing invalid username/password
         else:
             session['logged_in'] = True
             return redirect(url_for('register'))
