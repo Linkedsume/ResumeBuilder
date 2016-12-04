@@ -1,8 +1,9 @@
-from flask import Flask, session, redirect, url_for, escape, request, render_template, g
+from flask import Flask, session, redirect, url_for, escape, request, render_template, g, make_response, send_file, current_app as app
 import os
 import sqlite3
 import link
 from OpenSSL import SSL
+
 
 context = SSL.Context(SSL.SSLv23_METHOD)
 context.use_privatekey_file('domain.key')
@@ -41,12 +42,18 @@ def query_db(query, args=(), one=False):
     return (rv[0] if rv else None) if one else rv
 
 @app.route('/', methods = ['GET'])
-def wtf():
+def make_resume():
     if 'code' in request.args:
         generate = "https://localhost:5000/?code=" + request.args['code']
         link.make_json(generate)
         os.system("lualatex resume.tex")
-        return "done"
+        static_file = open('resume.pdf', 'rb')
+        response = send_file(static_file, attachment_filename='resume.pdf')
+        response.headers['Content-Type'] = 'application/pdf'
+        response.headers['Content-Disposition'] = \
+            'inline; filename=%s.pdf' % 'resume'
+        return response
+    return 'error'
 
 @app.route('/authorize')
 def authorize():

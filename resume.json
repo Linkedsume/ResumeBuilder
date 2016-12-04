@@ -1,27 +1,53 @@
 {
-  "emailAddress": "jonathanstein98@gmail.com",
-  "firstName": "Jonathan",
-  "headline": "Student at University of Illinois at Urbana-Champaign",
-  "id": "UtlcZgsnOb",
+  "emailAddress": "linkedsume@gmail.com",
+  "firstName": "Jim",
+  "headline": "Water Boy at Company number 2",
+  "id": "ErhbOsyCzP",
   "industry": "Computer Software",
-  "lastName": "Stein",
+  "lastName": "Smith",
   "location": {
     "country": {"code": "us"},
     "name": "Urbana-Champaign, Illinois Area"
   },
   "positions": {
-    "_total": 1,
-    "values": [{
-      "company": {"name": "companyname"},
-      "id": 878882094,
-      "isCurrent": true,
-      "location": {"name": "location"},
-      "startDate": {
-        "month": 7,
-        "year": 2016
+    "_total": 2,
+    "values": [
+      {
+        "company": {"name": "Company number 2"},
+        "id": 884235145,
+        "isCurrent": true,
+        "location": {
+          "country": {
+            "code": "us",
+            "name": "United States"
+          },
+          "name": "Urbana-Champaign, Illinois Area"
+        },
+        "startDate": {
+          "month": 2,
+          "year": 2016
+        },
+        "summary": "Keep people hydrated.",
+        "title": "Water Boy"
       },
-      "summary": "desciption",
-      "title": "titile"
-    }]
+      {
+        "company": {"name": "Impressive Startup"},
+        "id": 884234257,
+        "isCurrent": true,
+        "location": {
+          "country": {
+            "code": "us",
+            "name": "United States"
+          },
+          "name": "Greater Chicago Area"
+        },
+        "startDate": {
+          "month": 4,
+          "year": 2010
+        },
+        "summary": "Generated new deals for a real estate development company that focuses on multi-family residential projects, including real-estate market analysis.",
+        "title": "Software Engineer"
+      }
+    ]
   }
 }
