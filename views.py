@@ -41,24 +41,29 @@ def query_db(query, args=(), one=False):
     cur.close()
     return (rv[0] if rv else None) if one else rv
 
-@app.route('/', methods = ['GET'])
-def make_resume():
+@app.route('/', methods = ['GET', 'POST'])
+def generate():
+    error = None
     if 'code' in request.args:
         generate = "https://localhost:5000/?code=" + request.args['code']
         link.make_json(generate)
         os.system("lualatex resume.tex")
+    if request.method == 'POST':
         static_file = open('resume.pdf', 'rb')
         response = send_file(static_file, attachment_filename='resume.pdf')
         response.headers['Content-Type'] = 'application/pdf'
         response.headers['Content-Disposition'] = \
             'inline; filename=%s.pdf' % 'resume'
         return response
-    return 'error'
+    return render_template('Generate.html', error = error)
 
-@app.route('/authorize')
+@app.route('/authorize', methods = ['GET', 'POST'])
 def authorize():
-    redirection = link.author()
-    return redirect(redirection)
+    error = None
+    if request.method == 'POST':
+        redirection = link.author()
+        return redirect(redirection)
+    return render_template('Authorize.html', error = error)
 
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
@@ -87,8 +92,7 @@ def login():
             #showing invalid username/password
         else:
             session['logged_in'] = True
-            return redirect(url_for('register'))
-            # redirect url for register is only placeholder until we get the third page
+            return redirect(url_for('authorize'))
     return render_template('login.html', error = error)
 
 

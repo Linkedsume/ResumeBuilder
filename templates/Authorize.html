@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
   <title>Authorize</title>
-  <link rel="stylesheet" href="downloaddesign.css">
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='downloaddesign.css') }}">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 </head>
 <body>
@@ -35,12 +35,11 @@
     <dt><h2>Step 1: Login to your Linkedin Account and authorize.</h2></dt>
     <dd>
       <br></br>
-      <a href="https://www.google.com">
-        <button class="download">Linkedin</button>
+      <a href="https://localhost:5000/">
+        <form action="{{ url_for('authorize' )}}" method="post">
+          <button class="download">Authorize</button>
+        </form>
       </a>
       <br></br>
     </dd>
-  <div class="loginnext">
-    <button class="button" ><span>Next </span></button>
-  </div>
 </section>

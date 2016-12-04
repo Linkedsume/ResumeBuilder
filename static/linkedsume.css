@@ -1,10 +1,10 @@
 body {
-  margin: 0;
-  padding: 0 0;
+	margin: 0;
+	padding: 0 0;
 }
 
 .whole {
-  background-image:linear-gradient(to bottom right,#3e5b95, #30bfbf);
+	background-image:linear-gradient(to bottom right,#3e5b95, #30bfbf);
   height:650px;
   width:100%;
   color:white;
@@ -15,7 +15,7 @@ body {
   height:80px;
   color:white;
   border-bottom-style: solid;
-  border-bottom-color: white;
+	border-bottom-color: white;
   width:100%;
 }
 

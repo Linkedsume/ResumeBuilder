@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
   <title>Generate</title>
-  <link rel="stylesheet" href="downloaddesign.css">
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='downloaddesign.css') }}">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 </head>
 <body>
@@ -22,20 +22,19 @@
 
 
   <div class="imgbox">
-    <img src="sample.gif" />
+    <img src="{{ url_for('static', filename='sample.gif') }}" />
   </div>
 
 <dl class="generatestep">
 <dt><h2>Step 2:Click "Generate" button and wait a few seconds.</h2></dt>
 <dd>
   <br></br>
-  <a href="https://www.google.com">
-    <button class="download">Generate</button>
+  <a href="https://localhost:5000/pdf">
+    <form action="{{ url_for('generate') }}" method="post">
+      <button class="download">Generate</button>
+    </form>
   </a>
   <br></br>
 </dd>
 </dl>
-<div class="generatenext">
-  <button class="button" ><span>Next </span></button>
-</div>
 </section>
