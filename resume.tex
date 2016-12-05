@@ -13,13 +13,20 @@ function read(file)
 end
 JSON = (loadfile "JSON.lua")()
 local table = JSON:decode(read("resume.json"))
-tex.print(table['firstName'] .. " " .. table['lastName'] .. "\\par")
+tex.print("\\begin{LARGE}")
+tex.print("\\centerline {" .. table['firstName'] .. " " .. table['lastName'] .. "}\\par")
+tex.print("\\end{LARGE}")
+tex.print("\\hfill\\par")
 tex.print(table['headline'] .. "\\par")
 tex.print(table['location']['name'] .. "\\par")
 tex.print("Email: " .. table['emailAddress'] .. "\\par")
 tex.print("\\hfill\\par")
+if table['summary'] then
+  tex.print(table['summary'] .. "\\par")
+  tex.print("\\hfill\\par")
+end
 if table['positions']['_total']>0 then
-  tex.print("Positions:\\par")
+  tex.print("\\textbf{Positions:}\\par")
 end
 for i=1,table['positions']['_total'],1 do
   tex.print(table['positions']['values'][i]['company']['name'] .. "\\par")
