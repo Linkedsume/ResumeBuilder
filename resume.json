@@ -1,7 +1,7 @@
 {
   "emailAddress": "linkedsume@gmail.com",
   "firstName": "Jim",
-  "headline": "Water Boy at Company number 2",
+  "headline": "Student at University of Illinois Urbana-Champaign",
   "id": "ErhbOsyCzP",
   "industry": "Computer Software",
   "lastName": "Smith",
@@ -10,10 +10,10 @@
     "name": "Urbana-Champaign, Illinois Area"
   },
   "positions": {
-    "_total": 2,
+    "_total": 3,
     "values": [
       {
-        "company": {"name": "Company number 2"},
+        "company": {"name": "Water Inc"},
         "id": 884235145,
         "isCurrent": true,
         "location": {
@@ -47,6 +47,18 @@
         },
         "summary": "Lead developer of Company mobile app.",
         "title": "Software Engineer"
+      },
+      {
+        "company": {"name": "Moms R Us"},
+        "id": 884289822,
+        "isCurrent": true,
+        "location": {"name": "Mexico"},
+        "startDate": {
+          "month": 4,
+          "year": 2007
+        },
+        "summary": "Babysit children from ages 5 to 18.",
+        "title": "Babysitter"
       }
     ]
   },

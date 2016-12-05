@@ -14,8 +14,9 @@ end
 JSON = (loadfile "JSON.lua")()
 local table = JSON:decode(read("resume.json"))
 tex.print("\\begin{LARGE}")
-tex.print("\\centerline {" .. table['firstName'] .. " " .. table['lastName'] .. "}\\par")
+tex.print("\\centerline {\\textbf{" .. table['firstName'] .. " " .. table['lastName'] .. "}}\\par")
 tex.print("\\end{LARGE}")
+tex.print("\\noindent\\makebox[\\linewidth]{\\rule{12cm}{0.4pt}}")
 tex.print("\\hfill\\par")
 tex.print(table['headline'] .. "\\par")
 tex.print(table['location']['name'] .. "\\par")
@@ -26,11 +27,18 @@ if table['summary'] then
   tex.print("\\hfill\\par")
 end
 if table['positions']['_total']>0 then
+  tex.print("\\begin{large}")
   tex.print("\\textbf{Positions:}\\par")
+  tex.print("\\end{large}")
+  tex.print("\\hfill\\par")
 end
 for i=1,table['positions']['_total'],1 do
-  tex.print(table['positions']['values'][i]['company']['name'] .. "\\par")
+  tex.print("\\begin{large}")
+  tex.print("\\textbf{" .. table['positions']['values'][i]['company']['name'] .. "}\\par")
+  tex.print("\\end{large}")
+  tex.print("\\begin{large}")
   tex.print(table['positions']['values'][i]['title'] .. "\\par")
+  tex.print("\\end{large}")
   tex.print(table['positions']['values'][i]['summary'] .. "\\par")
   tex.print(table['positions']['values'][i]['startDate']['month'] .. "/" .. table['positions']['values'][i]['startDate']['year'] .. "-Present\\par")
   tex.print("\\hfill\\par")
