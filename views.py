@@ -43,6 +43,8 @@ def query_db(query, args=(), one=False):
 
 @app.route('/', methods = ['GET', 'POST'])
 def generate():
+    if 'logged_in' not in session or session['logged_in'] == False:
+        return redirect(url_for('login'))
     error = None
     if 'code' in request.args:
         generate = "https://localhost:5000/?code=" + request.args['code']
@@ -55,15 +57,17 @@ def generate():
         response.headers['Content-Disposition'] = \
             'inline; filename=%s.pdf' % 'resume'
         return response
-    return render_template('Generate.html', error = error)
+    return render_template('Display.html', error = error)
 
 @app.route('/authorize', methods = ['GET', 'POST'])
 def authorize():
+    if 'logged_in' not in session or session['logged_in'] == False:
+        return redirect(url_for('login'))
     error = None
     if request.method == 'POST':
         redirection = link.author()
         return redirect(redirection)
-    return render_template('Authorize.html', error = error)
+    return render_template('Display.html', error = error)
 
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
