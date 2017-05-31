@@ -4,8 +4,8 @@ import json
 # from linkedin.linkedin import (LinkedInAuthentication, LinkedInApplication, PERMISSIONS)
 
 
-CLIENT_ID = '78g6r3uc6qymtt'
-CLIENT_SECRET = 'kEvy5XZy8rvjL93e'
+CLIENT_ID = keys.CLIENT_ID
+CLIENT_SECRET = keys.SECRET
 AUTHORIZATION_BASE_URL = 'https://www.linkedin.com/uas/oauth2/authorization'
 TOKEN_URL = 'https://www.linkedin.com/uas/oauth2/accessToken'
 RETURN_URL = 'https://localhost:5000/'
